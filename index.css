@@ -1,3 +1,8 @@
+/* Style général */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,25 +11,20 @@ body {
   color: #333;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
-header {
-  background-color: brown;
+header, footer {
+  background-color: #d214a5; /* SaddleBrown */
   color: white;
   padding: 20px;
   text-align: center;
 }
 
+/* Navigation */
 nav ul {
   list-style-type: none;
   padding: 0;
-
 }
 ul{
-  list-style-type:none;
+  list-style-type: none;
 }
 
 nav ul li {
@@ -36,47 +36,14 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-section {
-  padding: 40px 20px;
-  text-align: center;
+nav ul li a:hover {
+  color: #FFDAB9; /* Peach Puff */
 }
 
-.images img {
-  width: 200px;
-  margin: 10px;
-  border-radius: 10px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-form input, form textarea {
-  width: 300px;
-  margin: 10px;
-  padding: 10px;
-}
-
-form button {
-  background-color: brown;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-footer {
-  background-color: brown;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
-
-/* Cacher le bouton menu sur desktop */
+/* Menu responsive */
 #menu-toggle {
   display: none;
 }
@@ -89,12 +56,12 @@ footer {
   padding: 10px;
 }
 
-/* Pour les petits écrans */
+/* Responsive menu */
 @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: brown;
+    background-color: #d214a5;
     position: absolute;
     width: 100%;
     top: 60px;
@@ -115,6 +82,18 @@ footer {
   }
 }
 
+/* Sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Sections alternées */
+section:nth-child(even) {
+  background-color: #fceff2;
+}
+
+/* Galerie d'images */
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -126,4 +105,32 @@ footer {
   width: 100%;
   max-width: 200px;
   height: auto;
+  border-radius: 10px;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+}
+
+form button {
+  background-color: #d214a5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #d214a5; /* Chocolate */
 }
