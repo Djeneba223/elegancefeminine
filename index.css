@@ -6,6 +6,11 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 header {
   background-color: brown;
   color: white;
@@ -69,4 +74,56 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+/* Cacher le bouton menu sur desktop */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+/* Pour les petits écrans */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: brown;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.images img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 }
